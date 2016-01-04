@@ -10,19 +10,19 @@ The UCS Director repository includes folders containing adapter source code, fiv
 
 ### Features
 
-#### Capacity and inventory report views
+##### Capacity and inventory report views
 * Volumes, Hosts, Hostgroups
 
-#### Cloudsense capacity report
+##### Cloudsense capacity report
 
-#### Five end to end workflows for ESXi deployments that include use of BMA (bare metal agent) PXE boot server.
+##### Five end to end workflows for ESXi deployments that include use of BMA (bare metal agent) PXE boot server.
 * Advanced Fibre Channel end to end workflow that includes setup of Unified Compute System(UCS) template
 * Advanced iSCSI end to end workflow that includes setup of UCS template
 * Basic Fibre Channel end to end workflow that requires UCS template already setup on UCS Fabric Interconnect
 * Basic iSCSI end to end workflow that requires UCS template already setup on UCS Fabric Interconnect
 * VM provisioning specific to Pure Storage FlashArray
 
-#### List of Tasks (all tasks include rollback tasks)
+##### List of Tasks (all tasks include rollback tasks)
 * Connect Volume to Host(s)
 * Connect Volume(s) to Hostgroup
 * Connect wwn(s)/iqn(s) to Host
