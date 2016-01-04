@@ -1,0 +1,140 @@
+<Cloupia:Include> header.include </Cloupia:Include>
+
+<Cloupia:ReportScript>
+out.println("<center>");
+out.println("<table class='none'>");
+out.println("<tr>");
+out.println("<td class='none' valign='top' align='center'>");
+out.println("<tr><td class='none' align='center'><img src='/app/uploads/openauto/pure3.png' width='200'></img></td></tr>");
+out.println("</td>");
+out.println("</tr>");
+out.println("</table>");
+out.println("</center>");
+</Cloupia:ReportScript>
+
+
+<Cloupia:ReportScript>
+out.println("<center>");
+out.println("<h2>Pure Storage FlashStack Report</h2>");
+
+out.println("<br>");
+out.println("<br>");
+out.println("Report generated at:");
+
+var reqtime = request.getRequestTime();
+
+out.println(reqtime);
+out.println("</center>");
+</Cloupia:ReportScript>
+
+<br><br><br>
+
+
+<Cloupia:ReportScript>
+var context= request.getContext();
+var arrayTable = api.getTabularReport("com.purestorage.flasharray.array",context);
+
+var totAccounts = arrayTable.rowCount();
+
+var accNames =  arrayTable.getColumnValues("Account Name");
+
+var free = arrayTable.getColumnValues("Free Space(GB)");
+var shared = arrayTable.getColumnValues("Shared Space(GB)");
+var system =  arrayTable.getColumnValues("System(GB)");
+var volumes = arrayTable.getColumnValues("Volumes Capacity(GB)");
+var snapshots = arrayTable.getColumnValues("Snapshots Capacity(GB)");
+var ip = arrayTable.getColumnValues("IP Address");
+var ver = arrayTable.getColumnValues("Version");
+var noOfVol = arrayTable.getColumnValues("Number of Volumes");
+var noOfSnap = arrayTable.getColumnValues("Number of Snapshot");
+var noOfHost = arrayTable.getColumnValues("No. Of Hosts");
+var noOfHostGroup = arrayTable.getColumnValues("No. Of HostGroups");
+var dataReduction = arrayTable.getColumnValues("Data Reduction");
+
+
+
+out.println("<h4>POD Name : "+context.getId()+"</h4>");
+
+out.println("<h4>Number Of FlashArray Accounts : "+totAccounts+"</h4>");
+out.println("<br>");
+   
+for(var i=0; i<totAccounts; i = i+1)
+{
+var ac = String(accNames[i]);
+var tabId = ac+";"+context.getId();
+out.println("<h5>Account Name : "+ac+"</h5>");
+
+out.println("<h5>IP Address : "+ip[i]+"</h5>");
+
+out.println("<h5>Version : "+ver[i]+"</h5>");
+out.println("<h5>Data Reduction : "+dataReduction[i]+"</h5>");
+out.println("<h5>No. Of Volumes : "+noOfVol[i]+"</h5>");
+out.println("<h5>No. Of Snapshots : "+noOfSnap[i]+"</h5>");
+out.println("<h5>No. Of Hosts : "+noOfHost[i]+"</h5>");
+out.println("<h5>No. Of HostGroups : "+noOfHostGroup[i]+"</h5>");
+out.println("<br>");
+out.println("<br>");
+out.println("<h4>  Capacity Report  :-</h4>");
+out.println("<br>");
+out.println("<br>");
+var tabContext =api.createContextByType(23,"",tabId);
+
+var volTable = api.getTabularReport("com.purestorage.flasharray.volume", tabContext);
+var hostTable = api.getTabularReport("com.purestorage.flasharray.host", tabContext);
+var hostGroupTable = api.getTabularReport("com.purestorage.flasharray.hostgroup", tabContext);
+
+var storSet = ValueSet.create();
+var fr = Double.parseDouble(free[i]);
+var sh = Double.parseDouble(shared[i]);
+var sy = Double.parseDouble(system[i]);
+var vo = Double.parseDouble(volumes[i]);
+var sn = Double.parseDouble(snapshots[i]);
+storSet.add("Free Space",fr);
+storSet.add("Shared Space",sh);
+storSet.add("System",sy);
+storSet.add("Volumes",vo);
+storSet.add("Snapshots",sn);
+htmlFormat.setGraphPrecision(0);
+htmlFormat.getGraphPrinter().setBarChartWidth(400);
+htmlFormat.getGraphPrinter().setBarChartHeight(300);
+htmlFormat.getGraphPrinter().setPieChartWidth(550);
+htmlFormat.getGraphPrinter().setPieChartHeight(450);
+out.println("<center>");
+htmlFormat.printPieChart(storSet,"Capacity Report(GB)");
+out.println("</center>");
+out.println("<br>");
+out.println("<br>");
+out.println("<h4> Volume Report:-</h4>");
+out.println("<br>");
+out.println("<center>");
+htmlFormat.printTable(volTable);
+out.println("</center>");
+out.println("<br>");
+out.println("<br>");
+out.println("<h4> Host Report:-</h4>");
+out.println("<br>");
+out.println("<center>");
+htmlFormat.printTable(hostTable);
+out.println("</center>");
+out.println("<br>");
+out.println("<br>");
+out.println("<h4> HostGroup Report:-</h4>");
+out.println("<br>");
+out.println("<center>");
+htmlFormat.printTable(hostGroupTable);
+out.println("</center>");
+out.println("<br>");
+out.println("<br><br><br><br>");
+
+ }
+
+</Cloupia:ReportScript>
+
+
+
+
+
+
+<br><br> 
+
+<Cloupia:Include> footer.include </Cloupia:Include>
