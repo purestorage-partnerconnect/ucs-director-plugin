@@ -1,0 +1,11 @@
+<pod-definition code="-1" type="FlashStack" label="FlashStack">
+    <pod-element category="2" count="-1" code="-1" account-types="flasharray_account">
+        <device-model vendor="[pP]ure [sS]torage" version=".*" model=".*" />
+    </pod-element>
+    <pod-element category="1" name="Cisco UCS" code="-1" count="1" account-types="11">
+            <device-model vendor="[cC]isco" version=".*" model="UCSM" />
+    </pod-element>
+    <pod-element category="3" name="NXOS" count="6" code="81" account-types="nxos,nx-os">
+            <device-model vendor="[cC]isco" version=".*" model="Nexus[\s]*[157].*" />
+    </pod-element>
+</pod-definition>
