@@ -59,7 +59,7 @@ public class ConnectHostVolumeTask extends GeneralTask
                 actionlogger.addInfo(volumeName + " has already been connected to host " + hostName);
                 continue;
             }
-            if(isLun==true && lunIdList.length>i )
+            if(isLun==true && lunIds!="" && lunIdList.length>i )
             {
                 
             	int lunId=Integer.parseInt(lunIdList[i]);

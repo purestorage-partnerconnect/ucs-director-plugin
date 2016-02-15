@@ -26,9 +26,9 @@ public class NewHostGroupTask extends GeneralTask
     public void executeCustomAction(CustomActionTriggerContext context, CustomActionLogger actionlogger) throws Exception
     {
         NewHostGroupTaskConfig config = (NewHostGroupTaskConfig) context.loadConfigObject();
-        accountName = config.getAccountName();
+        super.accountName = config.getAccountName();
         super.executeCustomAction(context, actionlogger);
-        actionlogger.addInfo("finished checking NewHostGroupTask accountname");
+        actionlogger.addInfo("finished checking NewHostGroupTask AccountName");
 
         String hostGroupPreName = config.getHostGroupPreName();
         String startNumber = config.getStartNumber();
@@ -39,6 +39,17 @@ public class NewHostGroupTask extends GeneralTask
         List<PureHostGroup> allHostGroup = CLIENT.hostGroups().list();
         List<String> allHostGroupName = new ArrayList<String>();
         List<String> noRollBackHostGroupName = new ArrayList<String>();
+        actionlogger.addInfo("finished "+startNumber+endNumber);
+        if(startNumber == null )
+        {
+        	startNumber="";
+        	
+        }
+        if( endNumber == null)
+        {
+        	
+        	endNumber="";
+        }
 
         for(PureHostGroup oneHostGroup : allHostGroup)
         {
