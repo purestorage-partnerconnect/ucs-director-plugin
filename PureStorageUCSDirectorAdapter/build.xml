@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="PureStorageUCSDirectorAdapter" default="build">
+    <!-- Property definitions -->
+    <property environment="env" />
+    <property name="adapter.name" value="PureStorageUCSDirectorAdapter" />
+    <property name="build.jarfile" value="feature-${adapter.name}.jar" />
+    <property name="module.id" value="psucs" /><!-- MUST match value in module.properties file -->
+    <property name="build.featurefile" value="${module.id}-module.feature" />
+    <property name="build.poddeffile" value="FlashStack.xml" />
+    <property name="build.modulefile" value="${adapter.name}.zip" />
+    <property name="dirs.base" location="." />
+    <property name="dirs.bin" location="${dirs.base}/bicn" />
+    <property name="dirs.deploy" location="${dirs.base}/deploy" />
+    <property name="dirs.deploy.pureclient" location="${dirs.deploy}/${module.id}/lib/pure" />
+    <property name="dirs.poddef" location="${dirs.deploy}/poddefinition" />
+    <property name="dirs.lib" location="${dirs.base}/lib" />
+    <property name="dirs.src" location="${dirs.base}/src" />
+    <property name="dirs.cloudsensesrc" location="${dirs.base}/cloudsense" />
+    <property name="dirs.cloudsensedest" location="${dirs.deploy}/cloudsense" />
+    <property name="jenkins.outfolder" value="http://trjenkins.dev.purestorage.com:8080/view/3rdman/job/BuildRESTLibraryJava1.0/lastSuccessfulBuild/artifact/purestorage-rest-client/target" />
+    <property name="jenkins.outfile" value="purestorage-rest-client-1.0-SNAPSHOT-shaded.jar" />
+    <property name="commons.lang" value="commons-lang/commons-lang3-3.4.jar" />
+    <property name="dirs.resourcessrc" location="${dirs.base}/resources" />
+    <property name="dirs.resourcesdest" location="${dirs.deploy}/resources" />
+
+    <!-- Classpath -->
+    <path id="class.path">
+        <fileset dir="${dirs.lib}">
+            <include name="**/*.jar" />
+        </fileset>
+    </path>
+
+    <!-- Download the Java REST library -->
+    <target name="download" unless="env.ucs_skip_download">
+        <get dest="${dirs.lib}"
+             src="${jenkins.outfolder}/${jenkins.outfile}"
+             ignoreerrors="true"
+             usetimestamp="true"
+             verbose="true" />
+    </target>
+
+    <!-- Compile to class files -->
+    <target name="compile" depends="download">
+        <mkdir dir="${dirs.bin}" />
+        <javac destdir="${dirs.bin}" debug="true" includes="**/*.java" includeantruntime="false" source="1.8"
+               target="1.8" classpathref="class.path" failonerror="true">
+            <src path="${dirs.src}" />
+            <compilerarg value="-Xlint:all" />
+            <compilerarg value="-Xlint:-options" />
+            <compilerarg value="-Werror" />
+        </javac>
+    </target>
+
+    <!-- Invoke JDOEnhancerTool to transform classes that need persistence -->
+    <target name="jdoEnhance" depends="compile">
+        <java classname="com.cloupia.cbuild.JDOEnhancerTool" fork="true" maxmemory="512m" failonerror="true">
+            <arg value="${dirs.src}" />
+            <arg value="${dirs.bin}" />
+            <classpath>
+                <pathelement path="${dirs.bin}" />
+                <fileset dir="${dirs.lib}">
+                    <include name="jdo/**/*.jar" />
+                    <include name="ucsd-oa-sdk/**/*.jar" />
+                    <include name="logging/**/*.jar" />
+                </fileset>
+            </classpath>
+        </java>
+    </target>
+
+    <!-- Package the class files and place the jar in the deployment folder -->
+    <target name="jar" depends="jdoEnhance">
+        <mkdir dir="${dirs.deploy}" />
+        <jar destfile="${dirs.deploy}/${build.jarfile}">
+            <fileset dir="${dirs.bin}">
+                <include name="**/*.class" />
+            </fileset>
+            <fileset dir="${dirs.src}">
+                <include name="module.properties" />
+                <include name="device_icon_mapping.xml"/>
+            </fileset>
+        </jar>
+    </target>
+
+    <!-- Layout the rest of the deployment folder -->
+    <target name="copyFiles">
+        <!-- CloudeSense -->
+        <mkdir dir="${dirs.cloudsensedest}" />
+        <copy todir="${dirs.cloudsensedest}">
+            <fileset dir="${dirs.cloudsensesrc}" includes="**" />
+        </copy>
+
+        <!-- Resources -->
+        <mkdir dir="${dirs.resourcesdest}" />
+        <copy todir="${dirs.resourcesdest}">
+            <fileset dir="${dirs.resourcessrc}" includes="**" />
+        </copy>
+
+        <!-- .feature file -->
+        <copy file="${dirs.base}/${build.featurefile}" todir="${dirs.deploy}" />
+
+        <!-- Pod definition file -->
+        <mkdir dir="${dirs.poddef}" />
+        <copy file="${dirs.base}/poddefinition/${build.poddeffile}" todir="${dirs.poddef}" />
+
+        <!-- Pure client jar -->
+        <mkdir dir="${dirs.deploy.pureclient}"/>
+        <copy file="${dirs.lib}/${jenkins.outfile}" todir="${dirs.deploy.pureclient}"/>
+        <copy file="${dirs.lib}/${commons.lang}" todir="${dirs.deploy.pureclient}"/>
+    </target>
+
+    <!-- Zip the deployment folder -->
+    <target name="zip" depends="jar,copyFiles">
+        <zip destfile="${dirs.base}/${build.modulefile}" basedir="${dirs.deploy}" />
+    </target>
+
+    <!-- Remove build artifacts -->
+    <target name="clean">
+        <delete dir="${dirs.bin}" />
+        <delete dir="${dirs.deploy}" />
+        <delete file="${dirs.base}/${build.modulefile}" />
+    </target>
+
+    <!-- The default target -->
+    <target name="build" depends="clean,zip" />
+</project>
