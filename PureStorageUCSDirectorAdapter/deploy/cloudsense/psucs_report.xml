@@ -1,0 +1,8 @@
+<ManagedReport>
+	<ID>psucs.test.cloudsense.report</ID>
+	<Type>Pure Storage Capacity and Inventory Report</Type>
+	<ImplFile>psucs_report.report</ImplFile>
+	<MenuID>60</MenuID>
+	<InputContext>23</InputContext>
+</ManagedReport>
+
