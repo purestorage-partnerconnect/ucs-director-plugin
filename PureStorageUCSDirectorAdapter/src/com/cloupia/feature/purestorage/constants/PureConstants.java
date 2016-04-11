@@ -17,8 +17,8 @@ public class PureConstants
     public static final String PURE_TIME_CLOCK_LOV_LABLE = "Pure Storage FlashArray Time Clock";
     public static final String PURE_VOLUME_SIZE_UNIT_LOV_NAME = "pureFlasharrayVolumeSizeSnit";
     public static final String PURE_VOLUME_SIZE_UNIT_LOV_LABLE = "Pure Storage Flasharray Volume Size Unit";
-    public static final String PURE_PORT_TABLE_NAME = "pureFlasharrayPortWwns";
-    public static final String PURE_PORT_TABLE_LABLE = "Pure Storage FlashArray Target WWN Ports";
+    public static final String PURE_PORT_TABLE_NAME = "pureFlasharrayPortWwpns";
+    public static final String PURE_PORT_TABLE_LABLE = "Pure Storage FlashArray Target WWPN Ports";
     public static final String PURE_PORT_TABLE_IQN_NAME = "pureFlasharrayPortIqns";
     public static final String PURE_PORT_TABLE_IQN_LABLE = "Pure Storage FlashArray Target IQN Ports";
     public static final String PURE_NETWORK_PORT_LIST_TABLE_NAME = "pureFlasharrayNetworkPortList";
