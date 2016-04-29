@@ -19,6 +19,7 @@ public class DeleteHGSuffixRangeTaskConfig extends GeneralTaskConfig
     @FormField(label = "FlashArray Account", help = "FlashArray Account", mandatory=true, type=FormFieldDefinition.FIELD_TYPE_EMBEDDED_LOV,
             lovProvider = FlashArrayAccountsNameProvider.NAME)
     @UserInputField(type = PureConstants.PURE_FLASHARRAY_ACCOUNT_LOV_NAME)
+    @Persistent
     private String accountName;
 
     @FormField(label = "HostGroup PrefixName or WholeName", help = "FlashArray HostGroup PrefixName or WholeName", mandatory = true)

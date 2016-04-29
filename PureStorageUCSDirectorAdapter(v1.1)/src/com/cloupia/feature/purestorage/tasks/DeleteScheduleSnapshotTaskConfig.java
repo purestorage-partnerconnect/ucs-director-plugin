@@ -20,6 +20,7 @@ public class DeleteScheduleSnapshotTaskConfig extends GeneralTaskConfig
     @FormField(label = "FlashArray Account", help = "FlashArray Account", mandatory=true, type=FormFieldDefinition.FIELD_TYPE_EMBEDDED_LOV,
             lovProvider = FlashArrayAccountsNameProvider.NAME)
     @UserInputField(type = PureConstants.PURE_FLASHARRAY_ACCOUNT_LOV_NAME)
+    @Persistent
     private String accountName;
 
     @FormField(label = "Volume Name", help = "Use ',' to seperate volumes name", mandatory = true,type=FormFieldDefinition.FIELD_TYPE_TABULAR_POPUP, table= VolumeTabularProvider.TABULAR_PROVIDER)
