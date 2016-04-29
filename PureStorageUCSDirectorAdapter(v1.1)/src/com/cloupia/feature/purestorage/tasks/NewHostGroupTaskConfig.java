@@ -22,6 +22,7 @@ public class NewHostGroupTaskConfig extends GeneralTaskConfig
     @FormField(label = "FlashArray Account", help = "FlashArray Account", mandatory=true, type=FormFieldDefinition.FIELD_TYPE_EMBEDDED_LOV,
             lovProvider = FlashArrayAccountsNameProvider.NAME)
     @UserInputField(type = PureConstants.PURE_FLASHARRAY_ACCOUNT_LOV_NAME)
+    @Persistent
     private String accountName;
 
     @FormField(label = "Host Group Prefix Name or Whole Name", help = "FlashArray Host Group Prefix Name or Whole Name", mandatory = true)
