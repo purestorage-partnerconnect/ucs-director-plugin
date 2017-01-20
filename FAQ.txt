@@ -1,0 +1,67 @@
+
+The Pure Storage Cisco UCS Director adapter is available for download from Pure Storage Github page.
+
+FAQ:
+Q. What version of UCS Director Pure Storage adapter supports?
+A. Pure Storage adapter will work with UCS Director 5.4.
+
+Q. What version of Purity has been qualified with UCS Director?
+A. Purity version 4.5 and 4.6 has been qualified with UCS Director.
+
+Q. What are the Pure Storage platforms supported by the adapter
+A. The adapter supports FA-400 series and FlashArray//m as long as the array runs Purity release 4.5 or above.
+
+Q. Is the Pure Storage adapter backward compatible with previous versions of UCS Director?
+A. No, users must upgrade the UCS Director to version 5.4.x.
+
+Q. What is the download link for UCS Director adapter?
+A. Please go to Github Pure Storage page: https://github.com/purestorage/ucs-director-plugin
+
+Q. What is available for download from Pure Storage UCS Director repository?
+A. Adapter zip file, open source repository (further development by customers/ISVs etc...) and canned ESX end to end workflows.
+
+Q. Why Pure Storage decided to open source the adapter?
+A. Our core value at Pure Storage is simplicity through software.  We believe that when you purchase our FlashArray, you don't need to pay software tax on top of the hardware to claim simplicity.  It is part of our platform.  Following this mantra, we are releasing the Pure Storage UCSDirector adapter as open source to enable our partners and customers to add more features without us becoming a bottleneck. 
+
+Q. Is there an official support from Pure Storage for the adapter?
+A. No, the support is provided by OneCloud Inc. as paid service.  As the customer demand increases for the adapter, we are considering sourcing support to OneCloud Inc and/or providing internal level 1 support.
+
+Q. What can you orchestrate with Pure Storage adapter?
+A. Provisioning of VMware vCenter, Cisco UCS, Cisco Nexus, Cisco MDS and FlashArray.
+
+Q. What features are available with the Pure Storage adapter?
+A.  See below
+* Capacity and inventory report views and CloudSense reports
+* Volumes, Hosts, Hostgroups
+
+Five end to end workflows for ESXi deployments that include use of BMA (bare metal agent) PXE boot server.
+* Advanced Fibre Channel end to end workflow that includes setup of Unified Compute System(UCS) template
+* Advanced iSCSI end to end workflow that includes setup of UCS template
+* Basic Fibre Channel end to end workflow that requires UCS template already setup on UCS Fabric Interconnect
+* Basic iSCSI end to end workflow that requires UCS template already setup on UCS Fabric Interconnect
+* VM provisioning specific to Pure Storage FlashArray
+
+List of Tasks (all tasks include rollback tasks)
+* Connect Volume to Host(s)
+* Connect Volume(s) to Hostgroup
+* Connect wwn(s)/iqn(s) to Host
+* Create Host
+* Create Hostgroup(s) * suffix range
+* Create Volume
+* Delete Host
+* Delete Hostgroup(s) * suffix range
+* Destroy Volume(s) * suffix range
+* Disable Scheduled Volume Snapshot
+* Disconnect Volumes with Host
+* Disconnect Volumes with Host Group
+* Resize Volume
+* Restore Volume from Snapshot
+* Rollback Resize Volume Task
+* Schedule Volume Snapshot
+
+Q. Where can I find out more about the Pure Storage integration with UCS Director?
+A. Please see video and powerpoint that includes screenshots and brief explanation.
+
+Q. Who should my customer contact to get more information around integration?
+A. Please send your email to open-connect@purestorage.com and ucsd-connect-external@purestorage.com.
+
