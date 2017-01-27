@@ -1,0 +1,41 @@
+<DeviceSupportList>
+    <!--  entire file is for a single category of devices valid values are: (network, storage, compute, virtualization) -->
+    <Category>storage</Category>
+
+    <!--
+         There can be only ONE Category Default per category. If this icon is specified, this icon is used if 
+            the vendor name is unknown OR (the vendor has no default and device is unknown)
+     -->
+     <!--
+     make sure you add "/app/uploads/openauto/" in front of the image name, all images in your module
+     are automatically place in this public folder
+     this isn't that important, if you implemented it properly, you should never need to use this
+      
+    <CategoryDefault>
+        <IconURL>/app/uploads/openauto/pure4.png</IconURL>
+    </CategoryDefault>
+-->
+    <!--
+        there can be one or more VendorDefault tags. One instance per each vendor.
+        this isn't that important, if you implemented it properly, you should never need to use this
+     
+    <VendorDefault>
+        <Vendor>Pure Storage</Vendor>
+        <IconURL>/app/uploads/openauto/pure3.png</IconURL>
+    </VendorDefault>
+-->
+    <!--  typically there can be any number of Device tags, one per each Vendor+DeviceType combination -->
+    <!--
+        You should have a Device entry for each device your collector supports, in my example there is only
+        one device/model.  This mapping file must be in synch with your ConvergedStackBuilder implementation!
+        Refer to DummyConvergedStackBuilder.java for details.
+    
+    <Device>
+        <DeviceType>Pure Storage Model</DeviceType>
+        <Vendor>Pure Storage Inc</Vendor>
+        <IconURL>/app/uploads/openauto/pure2.png</IconURL>
+        <Description>blah blah blah</Description>
+        <IsSupported>true</IsSupported>
+    </Device>
+    -->
+</DeviceSupportList>
