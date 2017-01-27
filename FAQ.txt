@@ -3,16 +3,16 @@ The Pure Storage Cisco UCS Director adapter is available for download from Pure 
 
 FAQ:
 Q. What version of UCS Director Pure Storage adapter supports?
-A. Pure Storage adapter will work with UCS Director 5.4.
+A. Pure Storage adapter will work with UCS Director 5.4,5.5 and 6.0 (respective connecter).
 
 Q. What version of Purity has been qualified with UCS Director?
-A. Purity version 4.5 and 4.6 has been qualified with UCS Director.
+A. Purity version 4.5 , 4.6 ,4.7 and 4.8 has been qualified with UCS Director.
 
 Q. What are the Pure Storage platforms supported by the adapter
 A. The adapter supports FA-400 series and FlashArray//m as long as the array runs Purity release 4.5 or above.
 
 Q. Is the Pure Storage adapter backward compatible with previous versions of UCS Director?
-A. No, users must upgrade the UCS Director to version 5.4.x.
+A. No, users must upgrade the UCS Director to version 5.4.x,5.5.x and 6.0.x.
 
 Q. What is the download link for UCS Director adapter?
 A. Please go to Github Pure Storage page: https://github.com/purestorage/ucs-director-plugin

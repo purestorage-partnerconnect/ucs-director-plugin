@@ -1,0 +1,155 @@
+<TaskDocList>
+
+	<TaskDoc>
+		<Task>Create Volume(s)-suffix range</Task>
+		<Summary>Create volume(s) in selected Pure Storage FlashArray</Summary>
+		<Description> <![CDATA[
+			This task will create volume(s) in selected Pure Storage FlashArray. Please fill the provide required inputs.			
+			]]>
+		</Description>
+	</TaskDoc>
+	<TaskDoc>
+		<Task>Create Volume(s)-suffix range</Task>
+		<Summary>Create volume(s) in selected Pure Storage FlashArray</Summary>
+		<Description> <![CDATA[
+			This task will create volume(s) in selected Pure Storage FlashArray. Please fill the provide required inputs.			
+			]]>
+		</Description>
+	</TaskDoc>
+	<TaskDoc>
+		<Task>Create Host</Task>
+		<Summary>Create Host in selected Pure Storage FlashArray</Summary>
+		<Description> <![CDATA[
+			This task will create host in selected Pure Storage FlashArray. Please fill the provide required inputs.			
+			]]>
+		</Description>
+	</TaskDoc>
+	<TaskDoc>
+		<Task>Create Hostgroup(s)-suffix range</Task>
+		<Summary>Create Hostgroup(s) in selected Pure Storage FlashArray</Summary>
+		<Description> <![CDATA[
+			This task will create Hostgroup(s) in selected Pure Storage FlashArray. Please fill the provide required inputs.			
+			]]>
+		</Description>
+	</TaskDoc>
+	
+	
+	<TaskDoc>
+		<Task>Connect wwn(s)/iqn(s) to Host</Task>
+		<Summary>Connect wwn(s)/iqn(s) to Host in selected Pure Storage FlashArray</Summary>
+		<Description> <![CDATA[
+			This task will connect wwn(s)/iqn(s) to host in selected Pure Storage FlashArray. Please fill the provide required inputs.			
+			]]>
+		</Description>
+	</TaskDoc>
+	<TaskDoc>
+		<Task>Connect Volume(s) to Host</Task>
+		<Summary>Connect Volume(s) to Host in selected Pure Storage FlashArray</Summary>
+		<Description> <![CDATA[
+			This task will connect volume(s) to host in selected Pure Storage FlashArray. Please fill the provide required inputs.			
+			]]>
+		</Description>
+	</TaskDoc>
+	<TaskDoc>
+		<Task>Connect Volume(s) to Hostgroup</Task>
+		<Summary>Connect Volume(s) to Hostgroup in selected Pure Storage FlashArray</Summary>
+		<Description> <![CDATA[
+			This task will connect volume(s) to hostgroup in selected Pure Storage FlashArray. Please fill the provide required inputs.			
+			]]>
+		</Description>
+	</TaskDoc>
+	<TaskDoc>
+		<Task>Connect Host(s) to Hostgroup</Task>
+		<Summary>Connect host(s) to hostgroup in selected Pure Storage FlashArray</Summary>
+		<Description> <![CDATA[
+			This task will connect host(s) to hostgroup in selected Pure Storage FlashArray. Please fill the provide required inputs.			
+			]]>
+		</Description>
+	</TaskDoc>
+	<TaskDoc>
+		<Task>Disconnect Volumes with Host</Task>
+		<Summary>Disconnect Volume(s) to Host in selected Pure Storage FlashArray</Summary>
+		<Description> <![CDATA[
+			This task will disconnect volume(s) to host in selected Pure Storage FlashArray. Please fill the provide required inputs.			
+			]]>
+		</Description>
+	</TaskDoc>
+	<TaskDoc>
+		<Task>Disconnect Volumes with Host Group</Task>
+		<Summary>Disconnect Volume(s) to Host Group in selected Pure Storage FlashArray</Summary>
+		<Description> <![CDATA[
+			This task will disconnect volume(s) to host group in selected Pure Storage FlashArray. Please fill the provide required inputs.			
+			]]>
+		</Description>
+	</TaskDoc>
+	<TaskDoc>
+		<Task>Delete Host</Task>
+		<Summary>Delete Host in selected Pure Storage FlashArray</Summary>
+		<Description> <![CDATA[
+			This task will delete host in selected Pure Storage FlashArray. Please fill the provide required inputs.			
+			]]>
+		</Description>
+	</TaskDoc>
+	<TaskDoc>
+		<Task>Delete Hostgroup(s)-suffix range</Task>
+		<Summary>Delete Hostgroup(s)-suffix range in selected Pure Storage FlashArray</Summary>
+		<Description> <![CDATA[
+			This task will delete hostgroup(s)-suffix range in selected Pure Storage FlashArray. Please fill the provide required inputs.			
+			]]>
+		</Description>
+	</TaskDoc>
+	
+	<TaskDoc>
+		<Task>Disable Scheduled Volume Snapshot</Task>
+		<Summary>Disable Scheduled Volume Snapshot in selected Pure Storage FlashArray</Summary>
+		<Description> <![CDATA[
+			This task will disable scheduled volume Snsapshot in selected Pure Storage FlashArray. Please fill the provide required inputs.			
+			]]>
+		</Description>
+	</TaskDoc>
+	<TaskDoc>
+		<Task>Destroy Volume(s)-suffix range</Task>
+		<Summary>Destroy Volume(s)-suffix range in selected Pure Storage FlashArray</Summary>
+		<Description> <![CDATA[
+			This task will destroy volume(s)-suffix range in selected Pure Storage FlashArray. Please fill the provide required inputs.			
+			]]>
+		</Description>
+	</TaskDoc>
+	<TaskDoc>
+		<Task>Rollback Resize Volume Task</Task>
+		<Summary>Rollback Resize Volume Task in selected Pure Storage FlashArray</Summary>
+		<Description> <![CDATA[
+			This task will rollback resize volume task in selected Pure Storage FlashArray. Please fill the provide required inputs.			
+			]]>
+		</Description>
+	</TaskDoc>
+	
+	<TaskDoc>
+		<Task>Resize Volume</Task>
+		<Summary>Resize Volume in selected Pure Storage FlashArray</Summary>
+		<Description> <![CDATA[
+			This task will resize volume in selected Pure Storage FlashArray. Please fill the provide required inputs.			
+			]]>
+		</Description>
+	</TaskDoc>
+	
+	<TaskDoc>
+		<Task>Schedule Volume Snapshot</Task>
+		<Summary>Schedule Volume Snapshot in selected Pure Storage FlashArray</Summary>
+		<Description> <![CDATA[
+			This task will schedule volume snapshot in selected Pure Storage FlashArray. Please fill the provide required inputs.			
+			]]>
+		</Description>
+	</TaskDoc>
+	<TaskDoc>
+		<Task>Restore Volume From Snapshot</Task>
+		<Summary>Restore Volume From Snapshot in selected Pure Storage FlashArray</Summary>
+		<Description> <![CDATA[
+			This task will restore volume from snapshot in selected Pure Storage FlashArray. Please fill the provide required inputs.			
+			]]>
+		</Description>
+	</TaskDoc>
+	
+	
+	
+</TaskDocList>
