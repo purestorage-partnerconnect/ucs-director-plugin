@@ -6,6 +6,6 @@
             <device-model vendor="[cC]isco" version=".*" model="UCSM" />
     </pod-element>
     <pod-element category="3" name="NXOS" count="6" code="81" account-types="nxos,nx-os">
-            <device-model vendor="[cC]isco" version=".*" model="Nexus[\s]*[157].*|MDS[\s]*[9].*" />
+            <device-model vendor="[cC]isco" version=".*" model="Nexus[\s]*[1579].*|MDS[\s]*[9].*" />
     </pod-element>
 </pod-definition>
