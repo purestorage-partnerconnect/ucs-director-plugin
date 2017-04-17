@@ -41,8 +41,7 @@ The UCS Director repository includes folders containing adapter source code, fiv
 * Schedule Volume Snapshot
 
 ### Compatibility
-The UCS Director 5.4,5.5 and 6.0 FlashArray adapter supports rest api 1.4 and later versions that is part of Purity 4.1, 4.5 and 4.6+ releases.  The rest api 1.4+ backward compatibility is ensured across all of Purity releases starting with 4.1.
+The Pure Storage UCS Director adapter supports REST API 1.4 and later versions that is part of Purity 4.1, 4.5 and 4.6+ releases.  The rest api 1.4+ backward compatibility is ensured across all of Purity releases starting with 4.1.
 
 ### Support
-The FlashArray adapter is not supported by Pure Storage.  Cisco technical assistance center provides support for UCS Director as part of the contract included in the software license purchase.  Cisco does not provide support for 3rd party vendor adapters.  The support for the FlashArray adapter is provided by OneCloud Inc. as paid service or through community.purestorage.com at no charge on best effort basis.
-
+The Pure Storage plugin for UCS Dirctor is supported by Pure Storage through its normal support channels.
