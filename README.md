@@ -10,7 +10,7 @@ http://flashstack.com
 The UCS Director repository includes folders containing adapter source code, workflows and compiled adapter zip file.
 
 ### Supported Storage Version
-* Any FlashArray Hardware running:
+Any FlashArray Hardware running:
 * Purity 4.x
 * Purity 5.x
 
