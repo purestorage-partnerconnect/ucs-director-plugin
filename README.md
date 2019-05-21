@@ -7,7 +7,12 @@ The FlashArray UCS Director adapter helps automate FlashStack deployments.  Flas
 http://flashstack.com
 
 ### Contents
-The UCS Director repository includes folders containing adapter source code, workflows and compiled adapter zip file.
+The UCS Director repository includes folders containing: -
+
+- Pure Storage Connector User Guide PDF
+- Pure Storage FlashArray Workflows wfdx file
+- Pure Storage Connector Adaptor zip file
+- Pure Storage Adaptor source code zip file
 
 ### Supported Storage Version
 Any FlashArray Hardware running:
