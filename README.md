@@ -14,6 +14,22 @@ Any FlashArray Hardware running:
 * Purity 4.x
 * Purity 5.x
 
+### Deploy/Modify the Pure Storage Connector
+1. Log in to Cisco UCS Director by using the Admin role credential
+2. In Cisco UCS Director, from the **Administration** menu, select **Open Automation**
+3. On the **Connectors** tab, click **Add** or Select Existing **Connector** and Click **Modify**
+4. Click **Open**. Select the *PureStorageUCSDirectorAdapter v3.1 (UCSD 6.7).zip*
+5. Click **Upload**, and then click **Submit**
+6. If the connector is not listed as **Enable**, select the newly added *psucs* module and Click **Enable
+7. Use SSH to connect to the Cisco UCS Director instance and log in as *shelladmin*
+(Default password is *changeme*)
+8. To enable the Pure Storage Connector, *stop all services* (option 3), and then *restart all
+services* (option 4)
+9. *[Optional when deploying/updating to v3.1 connecter]* Go to the Physical→
+Storage→FlashArray account’s edit/modify button and provide the correct FlashArray IP Address 
+(For more details check the Troubleshooting section in the User Guide)
+10. **Note:** After Cisco USC Director becomes available, be sure to check that the Pure Storage Connector is Enabled/Active.
+
 ##### Capacity and inventory report views
 * Inventory Report
 * Storage capacity Report
