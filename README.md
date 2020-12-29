@@ -2,7 +2,7 @@
 
 
 ### Overview
-The FlashArray UCS Director adapter helps automate FlashStack deployments.  FlashStack is a converged infrastructure reference architecture from Pure Storage that includes Cisco Unified Compute System (UCS), Cisco Nexus and MDS Fibre Channel and ethernet switches.
+The FlashArray UCS Director adapter helps automate FlashStack deployments.  FlashStack is a converged infrastructure reference architecture from Pure Storage that includes Cisco Unified Compute System (UCS), Cisco Nexus ethernet and MDS Fibre Channel switches.
 
 http://flashstack.com
 
