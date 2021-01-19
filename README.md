@@ -18,6 +18,7 @@ The UCS Director repository includes folders containing: -
 Any FlashArray Hardware running:
 * Purity 4.x
 * Purity 5.x
+* Purity 6.x
 
 ### Deploy/Modify the Pure Storage Connector
 1. Log in to Cisco UCS Director by using the Admin role credential
