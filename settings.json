@@ -1,6 +1,6 @@
 {
     "id": "ucs-director-plugin",
-    "filter": "Cisco",
+    "filter": "virtualization",
     "image": "http://code.purestorage.com/images/15_UCS-Director-Plugin.png",
     "featured": 1,
     "priority": 2
