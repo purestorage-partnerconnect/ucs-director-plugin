@@ -34,7 +34,7 @@ services* (option 4)
 9. *[Optional when deploying/updating to v3.1 connecter]* Go to the Physical→
 Storage→FlashArray account’s edit/modify button and provide the correct FlashArray IP Address 
 (For more details check the Troubleshooting section in the User Guide)
-10. **Note:** After Cisco USC Director becomes available, be sure to check that the Pure Storage Connector is Enabled/Active.
+10. **Note:** After Cisco UCS Director becomes available, be sure to check that the Pure Storage Connector is Enabled/Active.
 
 ##### Capacity and inventory report views
 * Inventory Report
